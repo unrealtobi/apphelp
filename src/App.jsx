@@ -1,27 +1,20 @@
-import { useState } from 'react'
-import './App.css'
-// import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import AboutMyThrift from './components/AboutMyThrift'
-import ComingSoonSection from './components/ComingSoonSection'
-import FAQs from './components/FAQS'
-import Countdown from './components/Countdown'
-import Footer from './components/Footer'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+import LandingPage from './components/Lnadingpage';
+import PrivacyPolicy from './components/Legal/PrivacyPolicy';
+import TermsAndConditions from './components/Legal/TermsAndConditions';
 
 function App() {
-  
   return (
-    <div >
-      {/* <Navbar /> */}
-      <Hero />
-      <AboutMyThrift></AboutMyThrift>
-      <ComingSoonSection></ComingSoonSection>
-      <FAQs></FAQs>
-      <Countdown></Countdown>
-      <Footer/>
-  
-    </div>
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-of-use" element={<TermsAndConditions />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;
