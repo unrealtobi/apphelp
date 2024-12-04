@@ -315,9 +315,9 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="container mx-auto md:px-6 px-6 text-center lg:text-left">
-        <div className="lg:flex lg:items-center">
-          <div className="lg:w-full h-full md:pb-20 lg:pb-20 pb-7 mt-20 md:px-20">
+   <div className="container mx-auto md:px-6 px-6 text-center lg:text-left relative">
+        <div className="lg:flex lg:items-center lg:relative">
+          <div className="lg:w-7/12 h-full md:pb-20 lg:pb-20 pb-7 mt-20 md:px-20">
             <motion.div
               variants={containerVariants}
               initial="hidden"
@@ -367,17 +367,18 @@ const Hero = () => {
           </div>
 
           <div
-            className="md:w-full w-full md:mt-20   flex justify-center items-center md:h-full opacity-0 transform"
+            className="md:w-full w-full md:mt-20   lg:w-auto lg:absolute lg:bottom-0 lg:right-0 lg:items-center  flex justify-center  items-center opacity-0 transform"
             ref={imageRef}
           >
             <img
               src={womanpic}
               alt="Happy shopper with bags"
-              className="md:w-auto md:h-full w-3/4 h-auto rounded-lg"
+              className="lg:w-[40rem] md:w-auto md:h-full w-3/4 h-auto rounded-lg"
             />
           </div>
         </div>
       </div>
+
 
       {isModalOpen && (
         <div className="fixed inset-0 flex items-center justify-center z-50">
