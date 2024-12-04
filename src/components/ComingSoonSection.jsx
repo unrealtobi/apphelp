@@ -235,33 +235,33 @@ const ComingSoonSection = () => {
               />
             </div>
           )}
+<div className="flex w-full ml-0 max-w-md mx-auto hidden sm:flex ">
+  <input
+    type="email"
+    placeholder="Enter Email Address"
+    className="flex-grow py-3 px-4 bg-[#F7F7F7] text-gray-700 placeholder-gray-500 rounded-l-full focus:outline-none focus:ring-2 focus:ring-gray-500"
+    value={email} // Bind the value to the state
+    onChange={handleEmailChange} // Update the state on input change
+  />
+  <button
+    onClick={handleWaitlistSubmit}
+    className="bg-gradient-to-r from-customOrange to-red-500 text-white font-semibold py-3 px-6 rounded-r-full hover:bg-orange-600 focus:outline-none disabled:opacity-50"
+    disabled={loading}
+  >
+    {loading ? (
+      <RotatingLines
+        strokeColor="white"
+        strokeWidth="5"
+        animationDuration="0.75"
+        width="24"
+        visible={true}
+      />
+    ) : (
+      "Join the Waitlist"
+    )}
+  </button>
+</div>
 
-          <div className="flex w-full md:block ml-2 lg:block hidden max-w-md">
-            <input
-              type="email"
-              placeholder="Enter Email Address"
-              className="flex-grow py-3 px-12 bg-[#F7F7F7] text-gray-700 placeholder-gray-500 rounded-l-full focus:outline-none focus:border-gray-500"
-              value={email} // Bind the value to the state
-              onChange={handleEmailChange} // Update the state on input change
-            />
-            <button
-              onClick={handleWaitlistSubmit}
-              className="bg-gradient-to-r from-customOrange to-red-500 text-white font-semibold py-3 px-6 rounded-r-full hover:bg-orange-600"
-              disabled={loading}
-            >
-              {loading ? (
-                <RotatingLines
-                  strokeColor="white"
-                  strokeWidth="5"
-                  animationDuration="0.75"
-                  width="24"
-                  visible={true}
-                />
-              ) : (
-                "Join the Waitlist"
-              )}
-            </button>
-          </div>
           <div className="flex w-full md:hidden lg:hidden max-w-md">
             <input
               type="email"
