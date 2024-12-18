@@ -357,12 +357,12 @@ const Hero = () => {
                 alt="People icons"
                 className="h-9 translate-y-2"
               />
-              <button
-                onClick={handleScrollToWaitlist}
-                className="bg-white text-customOrange h-12 px-4 font-semibold md:py-2 md:h-12 md:px-8 rounded-full hover:bg-gray-100"
-              >
-                Join the Waitlist
-              </button>
+             <button
+  onClick={() => window.open("https://www.shopmythrift.store", "_blank")}
+  className="bg-white text-customOrange h-12 px-4 font-semibold md:py-2 md:h-12 md:px-8 rounded-full hover:bg-gray-100"
+>
+  Shop Now!
+</button>
             </div>
           </div>
 
